@@ -1,0 +1,27 @@
+# libraries
+pandas
+numpy
+scipy
+
+# data source
+kagglehub
+
+# machine learning
+scikit-learn
+
+# pipeline and memoization
+joblib
+dask[complete]
+
+# natural language processing
+nltk
+wordcloud
+
+# jupyter notebooks
+import_ipynb
+
+# plotting libraries
+matplotlib
+seaborn
+plotly
+
