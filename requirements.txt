@@ -6,13 +6,6 @@ scipy
 # data source
 kagglehub
 
-# machine learning
-scikit-learn
-
-# pipeline and memoization
-joblib
-dask[complete]
-
 # natural language processing
 nltk
 wordcloud
