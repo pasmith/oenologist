@@ -1,13 +1,14 @@
 # test_client.py
 import unittest
 from unittest.mock import patch, MagicMock
-from geocode_utils import ping
+from utils.geocode_utils import ping
+
 
 class TestClient(unittest.TestCase):
     def setUp(self):
         self.url = "https://google.com"
 
-    @patch("geocode_utils.requests")
+    @patch("utils.geocode_utils.requests")
     def test_ping_returns_200(self, mock_requests):
         # mock a 200 response
         mock_response = MagicMock()
@@ -16,8 +17,8 @@ class TestClient(unittest.TestCase):
 
         result = ping(self.url)
         self.assertTrue(result)
-    
-    @patch("geocode_utils.requests")
+
+    @patch("utils.geocode_utils.requests")
     def test_ping_returns_500(self, mock_requests):
         # mock a 500 response
         mock_response = MagicMock()
@@ -26,6 +27,7 @@ class TestClient(unittest.TestCase):
 
         result = ping(self.url)
         self.assertFalse(result)
+
 
 if __name__ == "__main__":
     unittest.main()
