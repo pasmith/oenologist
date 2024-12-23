@@ -2,6 +2,7 @@ import os
 import pandas as pd
 import kagglehub
 from joblib import Memory
+import requests
 
 # configure cache
 cachedir = '.cache'
@@ -25,3 +26,7 @@ def get_country_code_lookup():
   countries = pd.read_csv(os.path.join(path, fname)) \
                 .rename(columns={'English short name lower case': 'country', 'Alpha-2 code': 'code'})[['country','code']]
   return dict(overrides, **countries.set_index('country').to_dict()['code'])
+
+def ping(url):
+    res = requests.get(url)
+    return res.status_code == 200

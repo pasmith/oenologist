@@ -8,6 +8,7 @@ kagglehub
 
 # geocode api lookup
 ratelimit
+requests
 
 # parallel processing
 joblib
