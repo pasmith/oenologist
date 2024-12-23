@@ -23,6 +23,10 @@ swifter[groupby]
 nltk
 wordcloud
 
+# code quality
+coverage
+ruff
+
 # jupyter notebooks
 import_ipynb
 
