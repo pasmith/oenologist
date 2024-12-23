@@ -6,6 +6,9 @@ scipy
 # data source
 kagglehub
 
+# geocode api lookup
+ratelimit
+
 # parallel processing
 joblib
 dask[complete]
