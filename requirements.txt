@@ -7,8 +7,10 @@ scipy
 kagglehub
 
 # geocode api lookup
+python-dotenv
 ratelimit
 requests
+mapbox
 
 # parallel processing
 joblib
