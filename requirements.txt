@@ -6,6 +6,13 @@ scipy
 # data source
 kagglehub
 
+# parallel processing
+joblib
+dask[complete]
+swifter
+swifter[notebook]
+swifter[groupby]
+
 # natural language processing
 nltk
 wordcloud
