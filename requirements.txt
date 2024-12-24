@@ -10,6 +10,8 @@ kagglehub
 python-dotenv
 ratelimit
 requests
+cachetools
+shelved_cache
 mapbox
 
 # parallel processing
