@@ -8,7 +8,6 @@ import requests
 cachedir = ".cache"
 memory = Memory(cachedir, verbose=0)
 
-
 @memory.cache
 def load_country_code_lookup():
     # manual overrides to address data quality issues
