@@ -1,5 +1,5 @@
 import unittest
-from utils.geocode_utils import get_country_code as lookup
+from .geocode_utils import get_country_code as lookup
 
 
 class CountryCodeLookupTest(unittest.TestCase):

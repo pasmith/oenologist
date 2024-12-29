@@ -1,7 +1,7 @@
 # test_client.py
 import unittest
 from unittest.mock import patch, MagicMock
-from utils.geocode_utils import ping
+from .geocode_utils import ping
 
 
 class TestClient(unittest.TestCase):
