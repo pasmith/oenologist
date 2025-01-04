@@ -1,6 +1,9 @@
 # libraries
 import numpy as np
 import pandas as pd
+from functools import cache
+from cachetools import cached, LRUCache
+
 # import geopandas as gpd
 import os
 import json
@@ -50,6 +53,7 @@ def __create_indexes(df = wineries):
 
   # index of wineries witn only one location
   by_name = by_('name')
+  known_wineries = np.unique(by_name.index)
   single_site_wineries = np.unique(by_name.query('count == 1').index)
 
   # index of wineries witn only one location per country
@@ -78,9 +82,9 @@ def __create_indexes(df = wineries):
   )
   multisite_wineries = np.unique(multisite_wineries.index)
 
-  return single_site_wineries, single_site_by_country_wineries, single_site_by_region_wineries, multisite_wineries
+  return known_wineries, single_site_wineries, single_site_by_country_wineries, single_site_by_region_wineries, multisite_wineries
 
-__single_site_wineries, __single_site_by_country_wineries, __single_site_by_region_wineries, __multisite_wineries = __create_indexes()
+__known_wineries, __single_site_wineries, __single_site_by_country_wineries, __single_site_by_region_wineries, __multisite_wineries = __create_indexes()
 
 __review_location_cols = ['winery', 'country', 'province', 'region_1', 'region_2']
 __geocode_cols = ['lat', 'lon', 'region', 'country', 'url']
@@ -90,18 +94,20 @@ RESOLVED_WINERY = namedtuple('RESOLVED_WINERY', __geocode_cols, defaults=[None]*
 
 __to_resolved_winery = lambda result: RESOLVED_WINERY(*next(result.itertuples(index=False)))
 
-
+@cached({}, info=True)
 def __calculate(query: str):
   print('calculating', query)
   return __to_resolved_winery(wineries.query(query)[__geocode_cols].groupby(['region', 'country', 'url']).mean().reset_index()[__geocode_cols])
 
+
+@cached({}, info=True)
 def __lookup(query: str):
   return __to_resolved_winery(wineries.query(query)[__geocode_cols])
 
 def geocode(row):
   
   # fail fast for unrecognized winery names
-  if wineries.name.isin([row.winery]).sum() < 1:
+  if not row.winery in __known_wineries:
     return RESOLVED_WINERY() # UNKNOWN_WINERY(row.winery, row.country, row.province, row.region_1, row.region_2)
   
   query_terms = [
