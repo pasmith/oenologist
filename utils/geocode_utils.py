@@ -3,6 +3,7 @@ import pandas as pd
 import kagglehub
 from joblib import Memory
 import requests
+from collections import namedtuple
 
 # configure cache
 cachedir = ".cache"
@@ -27,14 +28,14 @@ def load_country_code_lookup():
     )[["country", "code"]]
     return dict(overrides, **countries.set_index("country").to_dict()["code"])
 
-
 codes = load_country_code_lookup()
-
 
 def get_country_code(name: str) -> str:
     return codes[name] if name in codes else None
 
-
 def ping(url):
     res = requests.get(url)
     return res.status_code == 200
+
+
+LOCATION = namedtuple('LOCATION', ['lat', 'lon', 'address'], defaults = [None]*3)

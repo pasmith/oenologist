@@ -169,3 +169,8 @@ cython_debug/
 
 # local copy of data
 data/
+
+# data
+cache/
+files/
+*.db
