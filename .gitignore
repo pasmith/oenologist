@@ -173,4 +173,5 @@ data/
 # data
 cache/
 files/
+osm/
 *.db
