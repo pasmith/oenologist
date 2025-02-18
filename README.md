@@ -1,12 +1,32 @@
-# oenologist
-capstone project for UCB MLAI certificate: wine review
+### Project Title
+
+**Author**
+
+#### Executive summary
+
+#### Rationale
+Why should anyone care about this question?
+
+#### Research Question
+What are you trying to answer?
+
+#### Data Sources
+What data will you use to answer you question?
+
+#### Methodology
+What methods are you using to answer the question?
+
+#### Results
+What did your research find?
+
+#### Next steps
+What suggestions do you have for next steps?
+
+#### Outline of project
+
+- [Link to notebook 1]()
+- [Link to notebook 2]()
+- [Link to notebook 3]()
 
 
-### Code Quality
-- unittest: testing framework
-- coverage: test code coverage instumentation
-- Pylint: One of the most widely used linters, Pylint checks for errors, style violations, and adherence to PEP 8 (Python's style guide).
-- Flake8: A wrapper around PyFlakes (checks for errors), pycodestyle (checks for style violations), and McCabe (checks for code complexity).
-- Ruff: An extremely fast Python linter written in Rust. see [ruff-pre-commit](https://github.com/astral-sh/ruff-pre-commit)
-- Mypy: A static type checker that helps catch type-related errors.
-- [balck](https://medium.com/@dineshsuthar03/mastering-python-code-quality-pep-8-pylint-and-black-69b71d945e7d): code formatter
+##### Contact and Further Information
