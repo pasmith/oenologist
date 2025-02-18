@@ -1,26 +1,51 @@
-### Project Title
+### Oenologist
 
-**Author**
+**Patrick Smith**
 
 #### Executive summary
+```Oenologists evaluate the quality of wine and ensure it meets the desired outcome.```
+
+This project aims to use data science, specifically machine learning, to assess whether wines achieve desired outcomes based on qualitative wine reviews obtained experienced wine industry tasters. Desirable traits differ based on the types of wines. For example, certain wines are considered higher quality if they are dry, acidic, and aged in barrels, which imparts flavor and texture characteristics wine reviewers may note in their descriptions. Other wines are expected less dry and more fruity.
+
+This project trains classification algorithms on roughly 130k descriptions of wines reviewed by [WineEnthusiast](https://www.wineenthusiast.com/) between May and November 2017. Natural language processing is used to extract features from the descriptions and train the algorithm to predict the quality of the wine given the description, type of wine, and other data about the winemaker.
+
+Once successfully trained, this algorithm would be able to predict whether a wine is considered high quality, or has achieved the outcome expected for that wine, based on the descriptions obtained from industry tasters.
 
 #### Rationale
-Why should anyone care about this question?
+The global wine market is expected to be nearly a $350 billion industry in 2025. Gross margins for vineyards and wineries are on average 50%, while wine retailers and restaurants have profit margins of nearly 30% and 70% respectively. Factors that affect these profit margins include production volume, location, size of the winery, and market positioning. Wine reviews and quality assessments impact the reputation of the wine in the market, and in term impact how the wine is positioned in the market.
+
+- Vineyards and wineries can use predictions of the quality of their wines to influence their go-to-market strategies.
+
+- Retailers and restaurants can make educated purchasing decisions to fine tune their inventories and maximize their profit margins.
+
+- The general wine loving public is always interested in finding great quality wines from lesser known wine producers. A qualitative review of such wines can help such buyers discover wines they might enjoy despite not knowing the producer.
 
 #### Research Question
-What are you trying to answer?
+The main research question investigated here is assessing the quality of a wine by the type of wine it is, given the review description it received. The basic premise is that wines are expected to exhibit certain traits. The reviews should describe the traits of the wine. By using natural language processing, we expect to be able to extract these descriptions as features and train a model to predict the quality of a wine based on those features.
+
+We also expect to predict the corresponding price of the wine to help producers, retailers, and restaurants estimate what the public would be willing to pay for the wine given the review it has received.
 
 #### Data Sources
-What data will you use to answer you question?
+WineEnthusiast [Wine Reviews](https://www.kaggle.com/datasets/zynicide/wine-reviews) data set on Kaggle.
 
 #### Methodology
-What methods are you using to answer the question?
+The CRISP-DM methodology is applied to solving this data science problem.
+- Given the business objective defined above, the data will be explored and cleaned up.
+- After that, natural language processing techniques including stemming and lemmatization will be used to extract features from textual descriptions included in reviews of wines.
+- Then, several models will be trained to try to classify the wine based on its descriptions. Both individual multiclass classification algorithms, as well as ensemble methods will be used, and compared the performance to neural networks.
+
+Depending on the performance of the various models, a recommendation will be made, including its performance characteristics.
 
 #### Results
 What did your research find?
 
+**WIP**
+
 #### Next steps
-What suggestions do you have for next steps?
+Wine experts have information about soil characteristics, weather, temperature, and precipitation during the growing season of where the wine is grown. Given the geolocation of the winery that produced the wines, it would be interesting to augment this data set with data from 
+- XXXXX
+- XXXXX
+
 
 #### Outline of project
 
@@ -30,3 +55,4 @@ What suggestions do you have for next steps?
 
 
 ##### Contact and Further Information
+For information about this project, please contact `tuque_smith` on Kaggle.
