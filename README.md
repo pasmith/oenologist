@@ -49,9 +49,11 @@ Wine experts have information about soil characteristics, weather, temperature, 
 
 #### Outline of project
 
-- [Link to notebook 1]()
-- [Link to notebook 2]()
-- [Link to notebook 3]()
+- [initial data exploration](wine_review-initial_data_exploration.ipynb)
+- [data preparation](wine_review-data_preparation.ipynb)
+- [exploratory data analysis](wine_review-eda.ipynb)
+- [feature extraction](wine_review-feature_extraction.ipynb)
+- [baseline model notebook]()
 
 
 ##### Contact and Further Information
