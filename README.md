@@ -5,7 +5,9 @@
 #### Executive summary
 ```Oenologists evaluate the quality of wine and ensure it meets the desired outcome.```
 
-This project aims to use data science, specifically machine learning, to assess whether wines achieve desired outcomes based on qualitative wine reviews obtained experienced wine industry tasters. Desirable traits differ based on the types of wines. For example, certain wines are considered higher quality if they are dry, acidic, and aged in barrels, which imparts flavor and texture characteristics wine reviewers may note in their descriptions. Other wines are expected less dry and more fruity.
+This project aims to use data science, specifically machine learning, to assess whether wines achieve desired outcomes based on qualitative wine reviews obtained experienced wine industry tasters. Desirable traits differ based on the types of wines. For example, certain wines are considered higher quality if they are dry, acidic, and aged in barrels, which imparts flavor and texture characteristics wine reviewers may note in their descriptions. Other wines are expected less dry and more fruity. This infographic describes what flavors and characteristics are expressed by different types of wine.
+
+<img src="images/Different-Types-of-Wine-v2.jpg" alt="pinot noir" width="500"/>
 
 This project trains classification algorithms on roughly 130k descriptions of wines reviewed by [WineEnthusiast](https://www.wineenthusiast.com/) between May and November 2017. Natural language processing is used to extract features from the descriptions and train the algorithm to predict the quality of the wine given the description, type of wine, and other data about the winemaker.
 
