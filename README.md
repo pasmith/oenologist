@@ -109,9 +109,12 @@ ML models on Wine Reviews
 
 Geocode Data Augmentation (Work In Progress):
  - [given country shape, search for winery in OSM](osm-lookup-wineries.ipynb)
- - [outlines of nations where reviews are from](wineries-nations.ipynb)
  - [countries](countries.ipynb) and [provinces](provinces.ipynb) using local [natural earth] data files
- 
+ - [query local OSM files with local country/province shapes](wineries-nations.ipynb)
+ - TODO: match to wineries in dataset, [fuzzy](https://www.datacamp.com/tutorial/fuzzy-string-python) string matching
+ - TODO: fallback on other local source
+ - TDOD: fallback on online service like [Mapbox](https://www.mapbox.com/)
+
  
 ##### Contact and Further Information
 For information about this project, please contact `tuque_smith` on Kaggle.
