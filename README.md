@@ -99,6 +99,7 @@ What did your research find?
 
 #### Outline of project
 
+ML models on Wine Reviews
 - [initial data exploration](wine_review-initial_data_exploration.ipynb)
 - [data cleaning](wine_review-data_cleaning.ipynb)
 - [exploratory data analysis](wine_review-eda.ipynb)
@@ -106,6 +107,8 @@ What did your research find?
 - [feature extraction](wine_review-feature_extraction.ipynb)
 - [train initial model](wine_review-baseline_model.ipynb)
 
+Geocode Data Augmentation (Work In Progress):
+ - [outlines of nations where reviews are from](wineries-nations.ipynb)
 
 ##### Contact and Further Information
 For information about this project, please contact `tuque_smith` on Kaggle.
