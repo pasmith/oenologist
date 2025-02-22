@@ -66,7 +66,7 @@ There two distinct machine learning goals in this project.
       - After normalization, **vectorization** converts the word tokens into vectors of numbers that represent the words included in the review.
       - This sparse matrix is the feature matrix that is fed to the clustering algorithm to discover patterns in the data
 
-The second objective is a supervised learning classification problem where we want to predict the points a wine should earn based on the review it received.
+2. The second objective is a supervised learning classification problem where we want to predict the points a wine should earn based on the review it received.
 
 <div>
   <p align="center"><img src="images/ml-workflow.png" alt="pinot noir" width="500" /></p>
