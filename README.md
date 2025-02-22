@@ -108,8 +108,10 @@ ML models on Wine Reviews
 - [train initial model](wine_review-baseline_model.ipynb)
 
 Geocode Data Augmentation (Work In Progress):
+ - [given country shape, search for winery in OSM](osm-lookup-wineries.ipynb)
  - [outlines of nations where reviews are from](wineries-nations.ipynb)
-
+ 
+ 
 ##### Contact and Further Information
 For information about this project, please contact `tuque_smith` on Kaggle.
 
