@@ -81,8 +81,10 @@ Once the best model is identified, its performance will be measured. Accuracy an
 
 This is the model that would be put into service, for example, by a wine marketplace to train, coach and monitor its professional wine reviewers.
 
-    Note:
-    Since the corpus is so large, the development of the modeling code will be performed on a much smaller set of the data to verify the coding is structurally correct. Once the coding is complete, then the model will be trained on the full corpus.
+```text
+Note:
+Since the corpus is so large, the development of the modeling code will be performed on a much smaller set of the data to verify the coding is structurally correct. Once the coding is complete, then the model will be trained on the full corpus.
+```
 
 #### Results
 What did your research find?
