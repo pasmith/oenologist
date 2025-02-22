@@ -58,7 +58,6 @@ The data source for this project is the WineEnthusiast [Wine Reviews](https://ww
 #### Methodology
 There two distinct machine learning goals in this project.
 
-
 1. The first objective is an unsupervised learning application where we want to confirm that patterns exist in the reviews that align with the wine styles and wine classification. For this problem, we will consider applying Agglorimative clustering Analysis to reproduce the 9 common wine styles and 5 basic wine groupings based on the wine descriptions. This will confirm whether patterns exist in the data that can be used to predict quality in ways we can explain or understand.
 
     To accomplish this, we will apply natural language processing techniques (NLP) to convert textual reviews into features we can use in clustering algorithms. The conversion process involves:
@@ -81,6 +80,9 @@ Again the descriptions have to go through the tokenization and normalization pre
 Once the best model is identified, its performance will be measured. Accuracy and confusion matrix will be used as the main performance measures.
 
 This is the model that would be put into service, for example, by a wine marketplace to train, coach and monitor its professional wine reviewers.
+
+    Note:
+    Since the corpus is so large, the development of the modeling code will be performed on a much smaller set of the data to verify the coding is structurally correct. Once the coding is complete, then the model will be trained on the full corpus.
 
 #### Results
 What did your research find?
