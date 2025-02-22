@@ -110,6 +110,7 @@ ML models on Wine Reviews
 Geocode Data Augmentation (Work In Progress):
  - [given country shape, search for winery in OSM](osm-lookup-wineries.ipynb)
  - [outlines of nations where reviews are from](wineries-nations.ipynb)
+ - [countries](countries.ipynb) and [provinces](provinces.ipynb) using local [natural earth] data files
  
  
 ##### Contact and Further Information
