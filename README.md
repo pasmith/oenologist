@@ -115,6 +115,7 @@ Geocode Data Augmentation (Work In Progress):
  - TODO: match to wineries in dataset, [fuzzy](https://www.datacamp.com/tutorial/fuzzy-string-python) string matching
  - TODO: fallback on other local source
  - TDOD: fallback on online service like [Mapbox](https://www.mapbox.com/)
+ - TODO: use [request](https://stackoverflow.com/questions/14120502/how-to-download-and-write-a-file-from-github-using-requests) to download winery map data [file](https://github.com/oOo0oOo/winerymap/blob/main/vineyards.json)
 
  
 ##### Contact and Further Information
