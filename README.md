@@ -111,6 +111,7 @@ Geocode Data Augmentation (Work In Progress):
  - [given country shape, search for winery in OSM](osm-lookup-wineries.ipynb)
  - [countries](countries.ipynb) and [provinces](provinces.ipynb) using local [natural earth] data files
  - [query local OSM files with local country/province shapes](wineries-nations.ipynb)
+ - simplify the logic to use clipping shapes downloaded locally from natural earth to query for points of interests in locally downloaded OSM files.
  - TODO: match to wineries in dataset, [fuzzy](https://www.datacamp.com/tutorial/fuzzy-string-python) string matching
  - TODO: fallback on other local source
  - TDOD: fallback on online service like [Mapbox](https://www.mapbox.com/)
