@@ -1,4 +1,5 @@
 # libraries
+jupyter
 pandas
 numpy
 scipy
@@ -14,12 +15,13 @@ cachetools
 shelved_cache
 mapbox
 
-# parallel processing
-joblib
-dask[complete]
+# pipeline and memoization
 swifter
-swifter[notebook]
-swifter[groupby]
+joblib
+# dask[complete]
+
+# local persistence
+pyarrow
 
 # natural language processing
 nltk
@@ -30,7 +32,7 @@ coverage
 ruff
 
 # jupyter notebooks
-import_ipynb
+# import_ipynb
 
 # plotting libraries
 matplotlib
