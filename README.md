@@ -18,7 +18,7 @@ In fact, because of this consistency, we can expect the reviews to result in clu
 
 <div>
   <p align='center'><img src="images/wine_review_wc.png" alt="pinot noir" width="500"/></p>
-  <p align="center">Fig 1.: Infographic showing grouping of traits by wine type</p>
+  <p align="center">Fig 1.: Most common words used in wine reviews</p>
 </div>
 
 We will apply machine learning methods to predict the **quality** a wine should get based on the review it obtained. We can apply this both from a blind tasting (without knowing the winery) and a branded tasting (where the winemaker is revealed).
