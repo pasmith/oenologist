@@ -52,10 +52,6 @@ There are two research questions being investigated here.
 1. A clustering exercise to see to what extent we can reproduce the 9 common wine style grouping, and the 5 basic wine types, from the descriptions.
 1. Based on the description, we want to see if we can predict the points a wine would receive based on the review it received.
 
-- **Text Classification**: Assigning categories or labels to text documents based on their content. Examples include spam detection, topic classification, and sentiment analysis.
-- **Sentiment Analysis**: Determining the sentiment (positive, negative, neutral) expressed in a piece of text, which is useful for analyzing customer feedback, social media posts, and reviews.
-
-
 #### Data Sources
 The data source for this project is the WineEnthusiast [Wine Reviews](https://www.kaggle.com/datasets/zynicide/wine-reviews) data set on Kaggle. This dataset contains roughly 130k wine reviews commissioned by [WineEnthusiast](https://www.wineenthusiast.com/) between May and November 2017. 
 
