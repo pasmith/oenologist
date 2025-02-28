@@ -1,10 +1,14 @@
 # libraries
+jupyter
 pandas
 numpy
 scipy
 
 # data source
 kagglehub
+
+# machine learning
+scikit-learn
 
 # geocode api lookup
 python-dotenv
@@ -19,11 +23,12 @@ pyarrow
 
 
 # parallel processing
-joblib
-dask[complete]
 swifter
-swifter[notebook]
-swifter[groupby]
+joblib
+# dask[complete]
+
+# local persistence
+pyarrow
 
 # natural language processing
 nltk
@@ -35,7 +40,7 @@ ruff
 watermark
 
 # jupyter notebooks
-import_ipynb
+# import_ipynb
 
 # plotting libraries
 matplotlib

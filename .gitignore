@@ -169,6 +169,9 @@ cython_debug/
 
 # local copy of data
 data/
+cache/
+files/
+osm/
 
 # data
 cache/
