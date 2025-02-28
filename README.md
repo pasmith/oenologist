@@ -104,6 +104,8 @@ What did your research find?
 1. [exploratory data analysis](wine_review-eda.ipynb), explore whether classes are balanced, distributions of values, relationships bewteen features, etc.
 1. [preprocess](wine_review-preprocess.ipynb), explore and validate the preprocessing steps we want to take to convert textual descriptions into a set of high information tokens for machine learning
 1. [parallel preprocessing](wine_reviews-parallel_processing.ipynb) of the wine reviews, given how costly it is to preprocess the descriptions for NLP, parallelize the preprocessing of the data, and persist for use in following steps.
+1. [NLP Toolkit Selection](wine_reviews-nlp_selection.ipynb), explore alternatives like [spaCy](https://spacy.io/) to see if they perform better.
+1. [Preprocess reviews with spaCy](wine_reviews-spacy_preprocess.ipynb)
 1. [feature extraction](wine_review-feature_extraction.ipynb)
 1. [train initial model](wine_review-baseline_model.ipynb)
 
