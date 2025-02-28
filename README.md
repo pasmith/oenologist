@@ -17,7 +17,7 @@ Part of what drives this consistency is that these wine reviews are blind. The t
 In fact, because of this consistency, we can expect the reviews to result in clustering similar to those shown in the infographic below to emerge from the reviews. 
 
 <div>
-  <p align='center'><img src="images/wine_review_wc.png" alt="pinot noir" width="500"/></p>
+  <p align='center'><img src="images/banner.png" alt="pinot noir" width="500"/></p>
   <p align="center">Fig 1.: Most common words used in wine reviews</p>
 </div>
 
