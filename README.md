@@ -99,13 +99,13 @@ What did your research find?
 
 #### Outline of project
 
-ML models on Wine Reviews
-- [initial data exploration](wine_review-initial_data_exploration.ipynb)
-- [data cleaning](wine_review-data_cleaning.ipynb)
-- [exploratory data analysis](wine_review-eda.ipynb)
-- [preprocess](wine_review-preprocess.ipynb)
-- [feature extraction](wine_review-feature_extraction.ipynb)
-- [train initial model](wine_review-baseline_model.ipynb)
+1. [initial data exploration](wine_review-initial_data_exploration.ipynb), get to know the columns of the data 
+1. [data cleaning](wine_review-data_cleaning.ipynb), make decisions about missing values, duplicates, outliers, data formatting & interpretation. In this step we create a "clean" dataset that we persist for use in following steps.
+1. [exploratory data analysis](wine_review-eda.ipynb), explore whether classes are balanced, distributions of values, relationships bewteen features, etc.
+1. [preprocess](wine_review-preprocess.ipynb), explore and validate the preprocessing steps we want to take to convert textual descriptions into a set of high information tokens for machine learning
+1. [parallel preprocessing](wine_reviews-parallel_processing.ipynb) of the wine reviews, given how costly it is to preprocess the descriptions for NLP, parallelize the preprocessing of the data, and persist for use in following steps.
+1. [feature extraction](wine_review-feature_extraction.ipynb)
+1. [train initial model](wine_review-baseline_model.ipynb)
 
  
 ##### Contact and Further Information
