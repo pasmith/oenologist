@@ -172,3 +172,9 @@ data/
 cache/
 files/
 osm/
+catboost_info/
+temp/
+
+# other repo
+fastText/
+
