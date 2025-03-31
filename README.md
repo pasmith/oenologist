@@ -9,11 +9,9 @@
 ---
 #### Executive summary
 
-In this project, we will apply natural language processing and use machine learning techniques to predict the quality of wines based on reviews written about those wines. Given that the tasters reviewing the wines are [Sommeliers](https://en.wikipedia.org/wiki/Sommelier) professionally trained in the art of wine tasting, we can expect a fair amount of consistency in the reviews. We expect different sommeliers reviewing similar wines awarding similar scores and providing similar descriptions explaining why the wines earned the points they did.
+In this project, we will apply natural language processing and use machine learning techniques to predict the quality of wines based on reviews written about those wines. Given that tasters reviewing the wines are [Sommeliers](https://en.wikipedia.org/wiki/Sommelier) professionally trained in the art of wine tasting, we can expect a fair amount of consistency in the reviews. We expect different sommeliers reviewing similar wines awarding similar scores and providing similar descriptions explaining why the wines earned the points they did.
 
-Part of what drives this consistency is that these wine reviews are blind. The tasters do not know the winery or winemaker, when they taste the wine. Depending on the task, they may know the varietal and general provenance and/or vintage (year) the wine was made. This methodology allows marketplaces like [WineEnthusiast](https://www.wineenthusiast.com/about-us/) to differentiate themselves as influencers in the wine consumer industry. To maintain that influence, the review process must be consistent, repeatable and objective, which is ideal for machine learning.
-
-In fact, because of this consistency, we can expect the reviews to result in clustering similar to those shown in the infographic below to emerge from the reviews. 
+Reviews are blind, meaning tasters do not know the winery or price of the wine they taste. They will know general information including the variety, vintage (year the wine was made) and general area where the wine was made. Blind tasting allows marketplaces like [WineEnthusiast](https://www.wineenthusiast.com/about-us/) to differentiate themselves as influencers in the wine consumer industry. To maintain that influence, the review process must be consistent, repeatable and objective, which is ideal for machine learning.
 
 <div>
   <p align='center'><img src="images/banner.png" alt="pinot noir" width="500"/></p>
@@ -37,11 +35,9 @@ source: [Wine Enthusiast Ratings Testimonials](https://www.wineenthusiast.com/su
 Since the points ratings drive the demand and price of wines, it is vitally important that the reviews, and the associated ratings be fair and accurate. The reputation of the marketplace awarding the rating is critical to the marketplace.
 
 Here are three business use cases that can benefit from this research:
-- Wine producers are interested in ensuring their wines receive the highest ratings their wines can earn. As the testimonial mentioned above, this can make or break their business.
-
-- Wine marketplaces need to protect the reputation and influence on the market their reviews have. To do this, they need to operationalize a distributed global corps of reviewers at scale to continuously taste new wine releases and offerings while maintaining the consistency and predictability that makes their ratings influential. Onboarding new wine reviewers in ways that don't jeopardize the reputation of the marketplace is a challenge. A new, unknown reviewer could do real harm if a review is published without review. However, duplicating reviews is costly. Statistical techniques, and machine learning techniques can minimize the costs involved in ramping and training new reviewers, all while preserving the standards and quality of the review process. AI can even provide coaching to help train and onboard reviewers.
-
-- Wine distributors and restaurants can fine tune their inventories and increase profit margins by finding alternatives wine offerings that are equivalent in taste but cheaper. They might be able to achieve higher markup while offering the customer slightly cheaper alternatives.
+- Marketplaces reviewing wines can ensure their tasters are consistent and accurate.
+- Wine producers can ensure their wines receive the highest ratings possible since high ratings drive sales.
+- Wine distributors and restaurants can fine tune their inventories to match what their customers want.
 
 ---
 #### Research Question
@@ -62,11 +58,9 @@ The dataset contains thirteen (13) fields that describe:
 - **who** reviewed the wine: taster_name, taster_twitter_handle
 - the review and resulting **rating**: description, points
 
-After data cleaning and extracting features from the wine review descriptions, the dataset consisted of $98,460$ samples each with $837$ features extracted from One Hot Encoders of categories, augmenting numerical data given relationships deiscovered during Exploratory Data Analysis, and converting reviews to sentence embeddings using the [all-mpnet-base-v2](https://huggingface.co/sentence-transformers/all-mpnet-base-v2) pre-trained model that captures the semantic meaning of the review using a $768$ dimensional dense vector.
+After data cleaning and extracting features from the wine review descriptions, the dataset consisted of $98,460$ samples each with $837$ features extracted from One Hot Encoders of categories, augmenting numerical data given relationships discovered during Exploratory Data Analysis, and converting reviews to sentence embeddings using the [all-mpnet-base-v2](https://huggingface.co/sentence-transformers/all-mpnet-base-v2) pre-trained model that captures the semantic meaning of the review using a $768$ dimensional dense vector.
 
 #### Methodology
-There two distinct machine learning goals in this project.
-
 1. After getting to know the data and deciding what features to use, how to handle duplicate and missing data, an exploratory data analysis will be performed to understand the distribution of target classes, and how features relate to the target and each other.
 1. Then, since we are trying to extract features from the wine reviews, various natural language processing techniques will be assessed, including bag-of-words (BoW) and term frequency-inverse document frequency (TF-IDF) and compared to sentence embeddings to determine how to extract information from the reviews.
 1. Then several popular supervised learning models will be trained on a subset of the data to determine which models to train the entire dataset on based on training time and relative performance.
@@ -75,41 +69,42 @@ There two distinct machine learning goals in this project.
 1. And a neural network will be trained and compared to the machine learning classifiers.
 
 ##### Evaluation Metric
-Classification Accuracy is used as the primary evaluation metric providing the ratio of classes that are correctly predicted relative to the true value.
-
-Since this is a multinomial classification problem, the prediction results can be compared to correct values using the confusion matrix. Not only does the confusion matrix provide insights about how often the classifier is correct, it can give insights about the kinds of classification errors the classifiers are making. Consider the confusion matrix comparing the results of the XGBoost classifier and the neural classifier shown below.
-
-<p align="center">
-<img src="images/xgboost-conf-matrix.png" width="45%">&nbsp;<img src="images/neural-conf-matrix.png" width="45%">
-</p>
-
-The classification errors made by the neural classifiers are close to the diagonal, indicating that the neural classifier generally understood the quality of the wine, but missed some nuances of wines in adjacent categories. In contrast, the XGBoost classifier made large errors far off the diagonal. For example, it $38\%$ of the wines labeled `acceptable` were in face `excellent` wines. Such a misclassification can be devastating, not just to the winemaker, but also the marketplace publishing the review.
+Classification Accuracy and Confusion Matrices are the primary evaluation metric used. The classification accuracy provides an overall ratio of classes that are correctly predicted relative to the true value. In contrast, the confusion matrix provides insights into the types of misclassification errors the various classifiers make.
 
 #### Results
 What did your research find?
+- $53.6\%$ wines are only reviewed once
+- $5.4\%$ wines are only reviewed once
+- $99\%$ of wines reviewed come from $15$ countries
+- the top $50$ varieties reviewed account for $89\%$ of all the reviews in the dataset
+- $93.7\%$ of the wines reviewed were released after $2003$.
+- The average rating for the $130k$ wine reviews is $88$ points.
+- Only $4$ varieties have an average rating above $90$ points.
+- The top winery has a median rating of $94$ points.
+- The most prolific reviewer tastes one specific variety $50\text{x}$ more than any other vareity.
+- Ratings by taster are very close normal distributions with means around $87$ or $88$ points, which is expected.
+- The reviews for top rated wines are $2\text{x}$ as long as average wines.
+- Using review length alone as a baseline, a trained LogisticRegression classifier achieved an accuracy of $51.8\%$.
+- After hyperparameter tuning, an XGBoost classifier using sentence embeddings features extracted from a pretrained large language model achieved an accuracy of $52.8\%$.
+- A neural network classifier with 2 hidden layers achieved an accuracy of $60.3\%$.
 
-1. The first interesting finding that surfaced during exploratory data analysis is that there is a correlation between the length of the review and the rating the wine receives. Generally, the longer the review the better the rating. We can speculate that reviewers have to explain the nuances that make high quality wines remarkable, and such explanations require more words to articulate.
-    - High quality wines average $300$ words in length, while lower quality wines only average $150$ words.
-    - Reviews longer than $200$ words indicate a superior quality wine.
-1. The descriptions do contain a fair amount of structure, especially sentence embeddings.
-1. The dataset is insufficient to predict the `points` solely from the wine reviews. There may be several reasons for that. First, the same wines are not reviewed frequently. This makes sense. It may be prohibitive for the marketplace to publish multiple reviews for the same product. Likely, they determine one review to publish, so that they can make space to review other wine releases. So the dataset is lacking completeness. Also, reviews are short in form. Perhaps, the full taster notes would contain more information about what the tasters observed in the wine being reviewed. That information could help the models better discern between scores.
-    - As a result of this, the analysis is using the six (6) rating categories instead of points as the target to predict.
-1. The baseline model using review length as the sole feature derived from the review is able to achieve an accuracy of $51.8\%$.
-1. Several classifiers were trained and tuned including a multinomial Naive Bayes classifier, an ensemble classifier, and XGBoost. The Random Forest classifier was able to achieve an accuracy of $53.7\%$, while XGBoost was able to achieve an accuracy of $53.1\%$ much faster, in $\frac{1}{80}\text{th}$ of the time.
-1. The neural classifier achieved even higher accuracy of $58.4\%$. Adding more hidden layers, or changing the shape of the dense layers did not appear to significantly improve the accuracy.
-1. From this experiment, we can conclude the following.
-    - Natural language processing of taster notes can be analyzed to predict the point rating a wine can, or should get. After all, the purpose of the reviews are to inform consumers to buy wines. High prices for superior wines have to be justified, and the reviews are one vehicle through which this is accomplished. For credibility and reputational reasons, these reviews need to be fair and repeatable.
-    - To do this though, one needs access to all reviews collected, not just the subset published, from which this dataset is derived.
-    - One should also get access to the full tasting notes since the reviews are edited in form to be concise. A lot of information is lost.
+The classification errors made by the neural classifiers are close to the diagonal, indicating that the neural classifier generally understood the quality of the wine, but missed some nuances of wines in adjacent categories. In contrast, the XGBoost classifier made large errors far off the diagonal. For example, it $38\%$ of the wines labeled `acceptable` were in face `excellent` wines. Such a misclassification can be devastating, not just to the winemaker, but also the marketplace publishing the review.
+<p align="center">
+  <img src="images/xgboost-conf-matrix.png" width="45%">&nbsp;<img src="images/neural-conf-matrix.png" width="45%">
+</p>
+
+The receiver operating characteristic (ROC) curve shows how well the classifier does by target classes. The $classic$ target class has very few samples. The ROC curve indicates shows the classifier is unable to correctly classify this class. Other classes like $good$ or $excellent$ perform much better, partly because there are more samples.
+<p align="center">
+  <img src="images/roc.png" width="45%">
+</p>
+
 
 #### Next steps
   - Collecting more data, especially the full tasting notes from all tasters.
-  - Create a Task Management System powered by this machine learning model that can onboard new wine reviewers while minimizing the cost required to maintain the accuracy and integrity of the review process.
   - Additional data augmentation. Given lat-lon coordinates of wineries, add soil and precipitation data during growing season. Use in climate prediction applications to predict quality of wines given changing soil conditions and weather patterns. Tasters know this about the wines when they taste it. They look for the effects of climate and location when tasting.
   - Cutting-edge systems like [eTaste](https://www.theguardian.com/science/2025/feb/28/scientists-create-e-taste-device-that-could-add-flavour-to-virtual-reality-experiences) can be used to measure and calibrate wine tasters.
 
 #### Outline of project
-
 
 1. [Understanding the data](data_understanding.ipynb), get to know the data.
 1. [Data Cleaning](data_cleaning.ipynb), make decisions about missing values, duplicates, outliers, data formatting & interpretation.
@@ -133,7 +128,7 @@ For information about this project, please contact `tuque_smith` on Kaggle.
 - [x] README file with summary of findings and link to Jupyter Notebook(s)
 - [x] Jupyter notebook(s) with headings and text appropriately formatted
 - [ ] No unnecessary files
-- [ ] Directories and files with appropriate names
+- [x] Directories and files with appropriate names
 
 **Syntax and Code Quality**
 - [ ] Libraries imported and named correctly
