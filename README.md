@@ -9,7 +9,7 @@
 ---
 #### Executive summary
 
-In this project, we will apply natural language processing and use machine learning techniques to predict the quality of wines based on reviews written about those wines. Given that tasters reviewing the wines are [Sommeliers](https://en.wikipedia.org/wiki/Sommelier) professionally trained in the art of wine tasting, we can expect a fair amount of consistency in the reviews. We expect different sommeliers reviewing similar wines awarding similar scores and providing similar descriptions explaining why the wines earned the points they did.
+In this project, we will apply natural language processing and use machine learning techniques to predict the quality of wines based on reviews written about those wines. Given that tasters reviewing the wines are [Sommeliers](https://en.wikipedia.org/wiki/Sommelier) professionally trained in the art of wine tasting, we can expect a fair amount of consistency in the reviews. We expect different Sommeliers reviewing similar wines awarding similar scores and providing similar descriptions explaining why the wines earned the points they did.
 
 Reviews are blind, meaning tasters do not know the winery or price of the wine they taste. They will know general information including the variety, vintage (year the wine was made) and general area where the wine was made. Blind tasting allows marketplaces like [WineEnthusiast](https://www.wineenthusiast.com/about-us/) to differentiate themselves as influencers in the wine consumer industry. To maintain that influence, the review process must be consistent, repeatable and objective, which is ideal for machine learning.
 
@@ -58,7 +58,7 @@ The dataset contains thirteen (13) fields that describe:
 - **who** reviewed the wine: taster_name, taster_twitter_handle
 - the review and resulting **rating**: description, points
 
-After data cleaning and extracting features from the wine review descriptions, the dataset consisted of $98,460$ samples each with $837$ features extracted from One Hot Encoders of categories, augmenting numerical data given relationships discovered during Exploratory Data Analysis, and converting reviews to sentence embeddings using the [all-mpnet-base-v2](https://huggingface.co/sentence-transformers/all-mpnet-base-v2) pre-trained model that captures the semantic meaning of the review using a $768$ dimensional dense vector.
+After data cleaning and extracting features from the wine review descriptions, the dataset consisted of $98,460$ samples each with $837$ features extracted from One Hot Encoders of varieties, augmenting numerical data given relationships discovered during Exploratory Data Analysis, and converting reviews to sentence embeddings using the [all-mpnet-base-v2](https://huggingface.co/sentence-transformers/all-mpnet-base-v2) pre-trained model that captures the semantic meaning of the review using a $768$ dimensional dense vector.
 
 #### Methodology
 1. After getting to know the data and deciding what features to use, how to handle duplicate and missing data, an exploratory data analysis will be performed to understand the distribution of target classes, and how features relate to the target and each other.
@@ -131,34 +131,34 @@ For information about this project, please contact `tuque_smith` on Kaggle.
 - [x] Directories and files with appropriate names
 
 **Syntax and Code Quality**
-- [ ] Libraries imported and named correctly
-- [ ] Code with no errors
-- [ ] No long strings of code output
-- [ ] Demonstrate competency with pandas
-- [ ] Demonstration competence with viz libraries
-- [ ] Appropriate use of comments
-- [ ] Sensible variables
+- [x] Libraries imported and named correctly
+- [x] Code with no errors
+- [x] No long strings of code output
+- [x] Demonstrate competency with pandas
+- [x] Demonstration competence with viz libraries
+- [x] Appropriate use of comments
+- [x] Sensible variables
 
 ** Visualizations:
-- [ ] Appropriate plots for categorical and continuous variables
-- [ ] Plot with human-readable labels
-- [ ] Plots with descriptive titles
-- [ ] legible axes
-- [ ] Appropriate use of subplots when necessary
-- [ ] Plots that are scaled appropriately
+- [x] Appropriate plots for categorical and continuous variables
+- [x] Plot with human-readable labels
+- [x] Plots with descriptive titles
+- [x] legible axes
+- [x] Appropriate use of subplots when necessary
+- [x] Plots that are scaled appropriately
 
 ** Modeling:
 - [x] Multiple regression or classification models
 - [x] Cross-validation of models
 - [x] Grid Search hyperparameters
-- [ ] Appropriate interpretation of models
+- [x] Appropriate interpretation of models
 - [x] Appropriate interpretation of evaluation metric
 - [x] Clear identification of evaluation metric
 - [x] Clear rationale for use of given evaluation metric
 
 Findings:
-- [ ] Clearly states business understanding of the problem
-- [ ] Clean and organized notebook with data cleaning
-- [ ] Correct and concise interpretation of descriptive and inferential statistics
-- [ ] Clearly states findings in their own sections, with actionable items highlighted in appropriate language for a nontechnical audience
-- [ ] Next steps and recommendations
+- [x] Clearly states business understanding of the problem
+- [x] Clean and organized notebook with data cleaning
+- [x] Correct and concise interpretation of descriptive and inferential statistics
+- [x] Clearly states findings in their own sections, with actionable items highlighted in appropriate language for a nontechnical audience
+- [x] Next steps and recommendations
