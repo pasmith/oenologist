@@ -18,12 +18,12 @@ Reviews are blind, meaning tasters do not know the winery or price of the wine t
   <p align="center">Fig 1: Most common words used in wine reviews</p>
 </div>
 
-An initial Logistic Regression model is used as a baseline model and achieved an accuracy of $51.8% $. We will train and tune supervised learning classifiers, as well as neural network classifiers, and can expect that after tuning, the prediction accuracy will increase.
+An initial Logistic Regression model is used as a baseline model and achieved an accuracy of $51.8$. We will train and tune supervised learning classifiers, as well as neural network classifiers, and can expect that after tuning, the prediction accuracy will increase.
 
 ---
 
 #### Rationale
-The global wine market is expected to be nearly a $\$350$ billion industry in 2025. Gross margins for vineyards and wineries are on average 50%, while wine retailers and restaurants have profit margins of nearly $30%$ and $70%$ respectively. Factors that affect these profit margins include production volume, location, size of the winery, and market positioning. Wine reviews and quality assessments impact the reputation of the wine in the market, and in term impact both the demand for and the price that can be charged for a wine. As this testimonial attests, ratings can make the difference between being a successful business, or failing.
+The global wine market is expected to be nearly a $350 billion industry in 2025. Gross margins for vineyards and wineries are on average 50%, while wine retailers and restaurants have profit margins of nearly 30% and 70% respectively. Factors that affect these profit margins include production volume, location, size of the winery, and market positioning. Wine reviews and quality assessments impact the reputation of the wine in the market, and in term impact both the demand for and the price that can be charged for a wine. As this testimonial attests, ratings can make the difference between being a successful business, or failing.
 
 >Last year, slow sales at Domaine Clavel resulted in an unsold stockpile, putting the winery in a tough spot. Then, in July, Wine Enthusiast awarded its Côtes du Rhône Rouge a stunning $92$ points.
 >
@@ -73,22 +73,22 @@ Classification Accuracy and Confusion Matrices are the primary evaluation metric
 
 #### Results
 What did your research find?
-- $53.6%$ wines are only reviewed once
-- $5.4%$ wines are only reviewed once
-- $99%$ of wines reviewed come from $15$ countries
-- the top $50$ varieties reviewed account for $89%$ of all the reviews in the dataset
-- $93.7%$ of the wines reviewed were released after $2003$.
+- 53.6% wines are only reviewed once
+- 5.4% wines are only reviewed once
+- 99% of wines reviewed come from $15$ countries
+- the top 50 varieties reviewed account for 89% of all the reviews in the dataset
+- 93.7% of the wines reviewed were released after $2003$.
 - The average rating for the $130k$ wine reviews is $88$ points.
 - Only $4$ varieties have an average rating above $90$ points.
 - The top winery has a median rating of $94$ points.
 - The most prolific reviewer tastes one specific variety $50\text{x}$ more than any other vareity.
 - Ratings by taster are very close normal distributions with means around $87$ or $88$ points, which is expected.
 - The reviews for top rated wines are $2\text{x}$ as long as average wines.
-- Using review length alone as a baseline, a trained LogisticRegression classifier achieved an accuracy of $51.8%$.
-- After hyperparameter tuning, an XGBoost classifier using sentence embeddings features extracted from a pretrained large language model achieved an accuracy of $52.8%$.
-- A neural network classifier with 2 hidden layers achieved an accuracy of $60.3%$.
+- Using review length alone as a baseline, a trained LogisticRegression classifier achieved an accuracy of 51.8%.
+- After hyperparameter tuning, an XGBoost classifier using sentence embeddings features extracted from a pretrained large language model achieved an accuracy of 52.8%.
+- A neural network classifier with 2 hidden layers achieved an accuracy of 60.3%.
 
-The classification errors made by the neural classifiers are close to the diagonal, indicating that the neural classifier generally understood the quality of the wine, but missed some nuances of wines in adjacent categories. In contrast, the XGBoost classifier made large errors far off the diagonal. For example, it $38%$ of the wines labeled `acceptable` were in face `excellent` wines. Such a misclassification can be devastating, not just to the winemaker, but also the marketplace publishing the review.
+The classification errors made by the neural classifiers are close to the diagonal, indicating that the neural classifier generally understood the quality of the wine, but missed some nuances of wines in adjacent categories. In contrast, the XGBoost classifier made large errors far off the diagonal. For example, it 38% of the wines labeled `acceptable` were in face `excellent` wines. Such a misclassification can be devastating, not just to the winemaker, but also the marketplace publishing the review.
 <p align="center">
   <img src="images/xgboost-conf-matrix.png" width="45%">&nbsp;<img src="images/neural-conf-matrix.png" width="45%">
 </p>
@@ -130,44 +130,3 @@ For information about this project, please contact `tuque_smith` on Kaggle.
 
   **Additional Download Instructions**:
   - spaCy pretrained [en_core_web_lg](https://spacy.io/models/en#en_core_web_lg) model
-
----
-#### Criteria
-**Project Organization**
-- [x] README file with summary of findings and link to Jupyter Notebook(s)
-- [x] Jupyter notebook(s) with headings and text appropriately formatted
-- [ ] No unnecessary files
-- [x] Directories and files with appropriate names
-
-**Syntax and Code Quality**
-- [x] Libraries imported and named correctly
-- [x] Code with no errors
-- [x] No long strings of code output
-- [x] Demonstrate competency with pandas
-- [x] Demonstration competence with viz libraries
-- [x] Appropriate use of comments
-- [x] Sensible variables
-
-** Visualizations:
-- [x] Appropriate plots for categorical and continuous variables
-- [x] Plot with human-readable labels
-- [x] Plots with descriptive titles
-- [x] legible axes
-- [x] Appropriate use of subplots when necessary
-- [x] Plots that are scaled appropriately
-
-** Modeling:
-- [x] Multiple regression or classification models
-- [x] Cross-validation of models
-- [x] Grid Search hyperparameters
-- [x] Appropriate interpretation of models
-- [x] Appropriate interpretation of evaluation metric
-- [x] Clear identification of evaluation metric
-- [x] Clear rationale for use of given evaluation metric
-
-Findings:
-- [x] Clearly states business understanding of the problem
-- [x] Clean and organized notebook with data cleaning
-- [x] Correct and concise interpretation of descriptive and inferential statistics
-- [x] Clearly states findings in their own sections, with actionable items highlighted in appropriate language for a nontechnical audience
-- [x] Next steps and recommendations
