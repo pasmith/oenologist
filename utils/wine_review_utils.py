@@ -1,6 +1,5 @@
 # data structures and data handling
 import pandas as pd
-import numpy as np
 
 # data loading
 import os
@@ -8,9 +7,6 @@ import kagglehub
 
 # data manipulation
 import re
-from functools import reduce
-
-import kagglehub
 
 
 #

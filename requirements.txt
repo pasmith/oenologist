@@ -1,19 +1,23 @@
 # libraries
 jupyter
 pandas
-numpy
+numpy==1.26
 scipy
+tqdm
+
+#geo mapping
+geopandas
+contextily
+mapclassify
 
 # data source
 kagglehub
 
 # machine learning
 scikit-learn
-
-# pipeline and memoization
-swifter
-joblib
-# dask[complete]
+xgboost
+catboost
+tf-keras
 
 # local persistence
 pyarrow
@@ -21,9 +25,9 @@ pyarrow
 # natural language processing
 nltk
 wordcloud
-
-# jupyter notebooks
-# import_ipynb
+spacy
+sentence-transformers
+einops
 
 # plotting libraries
 matplotlib
