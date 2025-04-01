@@ -18,7 +18,7 @@ Reviews are blind, meaning tasters do not know the winery or price of the wine t
   <p align="center">Fig 1: Most common words used in wine reviews</p>
 </div>
 
-An initial Logistic Regression model is used as a baseline model and achieved an accuracy of $51.8$. We will train and tune supervised learning classifiers, as well as neural network classifiers, and can expect that after tuning, the prediction accuracy will increase.
+An initial Logistic Regression model is used as a baseline model and achieved an accuracy of 51.8%. We will train and tune supervised learning classifiers, as well as neural network classifiers, and can expect that after tuning, the prediction accuracy will increase.
 
 ---
 
